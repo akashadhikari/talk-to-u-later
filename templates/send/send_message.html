@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <body>
+    <div class="container">
+    <h1>Send Facebook Message!</h1>
+    <p><b>Note:</b> Before you begin, you might want to check the <b>thread id of the target user.</b><a target="_blank" rel="noopener noreferrer" href="https://findmyfbid.com/"> Open this link</a> and enter the profile URL of target user.</p>
+
+    <form method="POST">{% csrf_token %}
+      {{ form.as_p }}
+      <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+  </div>
+
+    
+  </body>
+{% endblock %}
