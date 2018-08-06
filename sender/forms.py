@@ -7,7 +7,7 @@ class MessageForm(forms.Form):
         'placeholder': 'Enter your Facebook email.'
     }))
     my_facebook_password = forms.CharField(
-        help_text='<b>NOTE: The creator of this app <code>does not</code> acquire your login credentials by <code>any</code> means. Security and privacy are pretty serious deals form him!</b>',
+        help_text='<b>NOTE: The creator of this app <code>does not</code> acquire your login credentials by <code>any</code> means. Security and privacy are pretty serious deals for him!</b>',
         widget=forms.PasswordInput(attrs={
         'class': 'form-control',
         'placeholder': 'Enter your Facebook password.'
