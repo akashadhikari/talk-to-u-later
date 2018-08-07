@@ -19,14 +19,15 @@ def send_message(request):
         thread_type = request.POST.get('message_target')
         thread_id = request.POST.get('thread_id')
         message = request.POST.get('my_message')
+        schedule = request.POST.get('schedule')
+        print(schedule)
 
-    
-        client = Client(email, password)
-
-        if thread_type == 'ThreadType.GROUP':
-            client.send(Message(text=message), thread_id=thread_id, thread_type=ThreadType.GROUP)
-        else:
-            client.send(Message(text=message), thread_id=thread_id, thread_type=ThreadType.USER)
+        # client = Client(email, password)
+        #
+        # if thread_type == 'ThreadType.GROUP':
+        #     client.send(Message(text=message), thread_id=thread_id, thread_type=ThreadType.GROUP)
+        # else:
+        #     client.send(Message(text=message), thread_id=thread_id, thread_type=ThreadType.USER)
     if request.POST:
         return redirect('sender:sent')
 
