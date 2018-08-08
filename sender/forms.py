@@ -1,3 +1,4 @@
+from datetime import datetime
 from django import forms
 
 
@@ -18,12 +19,12 @@ class MessageForm(forms.Form):
     )
 
     message_target = forms.ChoiceField(choices=TARGET,
-                                   label="Message Target",
-                                   required=True,
-                                   initial='',
-                                   widget=forms.Select(attrs={
-                                       'class': 'form-control',
-                                   }))
+        label="Message Target",
+        required=True,
+        initial='',
+        widget=forms.Select(attrs={
+            'class': 'form-control',
+            }))
     thread_id = forms.CharField(widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'The thread ID of a person or a group that you want to send the message.'
@@ -35,8 +36,10 @@ class MessageForm(forms.Form):
         'cols': 15
     }))
     schedule_time = forms.DateTimeField(
+        required = False,
         input_formats=["%Y-%m-%d %H:%M:%S"],
-        help_text='<b>Note:</b> Leaving this field empty will send the message right NOW.',
+        initial=datetime.strptime(str(datetime.now())[:-7], '%Y-%m-%d %H:%M:%S'),
+        help_text='<b>Note:</b> Leaving this field <b>as is</b> will send the message right NOW. Also, if you insert past time, the system will automatically make it to present.',
         widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Should be something like: 2020-05-35 01:30:20',
