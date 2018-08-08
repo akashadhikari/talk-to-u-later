@@ -1,3 +1,5 @@
+from datetime import datetime, timedelta
+
 from django.shortcuts import render, redirect
 from fbchat import Client
 from fbchat.models import *
@@ -19,8 +21,11 @@ def send_message(request):
         thread_type = request.POST.get('message_target')
         thread_id = request.POST.get('thread_id')
         message = request.POST.get('my_message')
-        schedule = request.POST.get('schedule')
-        print(schedule)
+        schedule_time = request.POST.get('schedule_time')
+        striped_date = datetime.strptime(schedule_time, '%Y-%m-%d %H:%M:%S')
+        now = datetime.now()
+        total_seconds = (striped_date - now).total_seconds()
+        print(total_seconds)
 
         # client = Client(email, password)
         #

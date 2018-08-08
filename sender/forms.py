@@ -34,7 +34,8 @@ class MessageForm(forms.Form):
         'rows': 4,
         'cols': 15
     }))
-    schedule = forms.DateTimeField(
+    schedule_time = forms.DateTimeField(
+        input_formats=["%Y-%m-%d %H:%M:%S"],
         help_text='<b>Note:</b> Leaving this field empty will send the message right NOW.',
         widget=forms.TextInput(attrs={
         'class': 'form-control',
