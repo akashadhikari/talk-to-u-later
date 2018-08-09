@@ -2,6 +2,7 @@ import json
 from datetime import datetime, timedelta
 
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from fbchat import Client
 from fbchat.models import *
 
@@ -32,14 +33,12 @@ def send_message(request):
 
         client = Client(email, password)
 
-        import ipdb;ipdb.set_trace()
-
         if thread_type == 'ThreadType.GROUP':
             send_delay_group.apply_async(args=[client, message, thread_id], eta=datetime.utcnow() + timedelta(seconds=total_seconds))
         else:
             send_delay_user.apply_async(args=[client, message, thread_id], eta=datetime.utcnow() + timedelta(seconds=total_seconds))
     if request.POST:
-        return redirect('sender:sent')
+        return HttpResponse("<b>SUCCESS!!! </b>Message Sent To Queue. <a href='/'>Send again?</a>")
 
     return render(request, "send/send_message.html", context)
 
@@ -51,4 +50,4 @@ def sent(request):
     return render(request, "send/sent.html", context)
 
 # celery -A ttyl worker -l info
-# celery -A ttyl beat -info
+# celery -A ttyl beat -l info
