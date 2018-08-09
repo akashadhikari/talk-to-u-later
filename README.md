@@ -55,3 +55,7 @@ Check out [Redis Website](https://redis.io/download) for more details.
 `http://localhost:8000/`
 
 ### That's it. Now you can send delayed Facebook messages!
+
+# Screenshot
+
+![alt text](https://raw.githubusercontent.com/akashadhikari/talk-to-u-later/master/screenshots/schedule.png "Home page screenshot.")
