@@ -15,7 +15,7 @@ I assume you have following things installed already:
 
 `git clone https://github.com/akashadhikari/talk-to-u-later.git`
 
-`cd talk-to-you-later`
+`cd talk-to-u-later`
 
 `python3 -m venv .venv`
 
