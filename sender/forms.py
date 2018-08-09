@@ -39,7 +39,7 @@ class MessageForm(forms.Form):
         required = False,
         input_formats=["%Y-%m-%d %H:%M:%S"],
         initial=datetime.strptime(str(datetime.now())[:-7], '%Y-%m-%d %H:%M:%S'),
-        help_text='<b>Note:</b> Leaving this field <b>as is</b> will send the message right NOW. Also, if you insert past time, the system will automatically make it to present.',
+        help_text='<b>Note:</b> Time is in <a href="https://www.timeanddate.com/worldclock/timezone/utc">UTC</a>. Leaving this field <b>as is</b> will send the message right NOW. Also, if you insert past time, the system will automatically make it to present.',
         widget=forms.TextInput(attrs={
         'class': 'form-control',
         'placeholder': 'Should be something like: 2020-05-35 01:30:20',

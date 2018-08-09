@@ -1,1 +1,49 @@
-# talk-to-u-later
+# Talk to u later
+<p>Imagine its your girlfriend's birthday tomorrow. (No offense if you're single. You can still imagine. :p )</p>
+<p>You had a very long day at work and thus, all you wanna do is go to bed once you reach home. But you know you have to wish her exactly at 00:00 because idk, its like the <b>golden rule</b> of relationship. </p>
+<p>What do you do? You'll probably be a good lad and stay all night just to wish her a happy birthday on Facebook and make her feel "special" (lol).</p>
+<p>Or, may be, you can become smart lad and try this dope thing. Talk to u later (ttyl) is for people like you. Its also for people like me. Its for everyone who are busy in their lives. Its for everyone who would love to send a <b>scheduled Facebook messages.</b></p>
+
+# Installation
+
+`git clone https://github.com/akashadhikari/talk-to-u-later.git`
+
+`cd talk-to-you-later`
+
+`python3 -m venv .venv`
+
+`source .venv/bin/activate`
+
+`pip3 install -r requirements.txt`
+
+`python3 manage.py migrate`
+
+`python3 manage.py runserver`
+
+### In the next terminal window
+
+### Install Redis
+`sudo apt install redis-server`
+
+### Check if Redis is up!
+
+`redis-cli ping`
+
+### This should show you the result `PONG`
+
+### In the same terminal
+
+`source .venv/bin/activate`
+
+`celery -A ttyl worker -l info`
+
+### In yet another terminal window, run
+
+`source .venv/bin/activate`
+
+`celery -A ttyl beat -l info`
+
+### Open your browser and go to
+`http://localhost:8000/`
+
+### That's it. Now can send delayed Facebook messages!
