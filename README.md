@@ -55,6 +55,7 @@ Check out [Redis Website](https://redis.io/download) for more details.
 `http://localhost:8000/`
 
 ### That's it. Now you can send delayed Facebook messages!
+<b>WARNING!!!</b>: If you schedule the time to the past, the application will cause distortion in time and space which might ultimately lead you to an alternate universe. :p
 
 # Screenshot
 
