@@ -2,7 +2,7 @@
 <p>Imagine its your girlfriend's birthday tomorrow. (No offense if you're single. You can still imagine. :p )</p>
 <p>You had a very long day at work and thus, all you wanna do is go to bed once you reach home. But you know you have to wish her exactly at 00:00 because idk, its like the <b>golden rule</b> of relationship. </p>
 <p>What do you do? You'll probably be a good lad and stay up all night just to wish her a happy birthday on Facebook and make her feel "special" (lol).</p>
-<p>Or, may be, you can become a smart lad and try this dope thing. <b>Talk to u later (ttyl)</b> is for people like you. Its also for people like me. Its for everyone who are busy in their lives. Its for everyone who would love to send a <b>scheduled Facebook messages.</b></p>
+<p>Or, may be, you can become a smart lad and try this dope thing. <b>Talk to u later (ttyl)</b> is for people like you. Its also for people like me. Its for everyone who are busy in their lives. Its for everyone who would love to send <b>scheduled Facebook messages.</b></p>
 
 # Requirements
 I assume you have following things installed already:
